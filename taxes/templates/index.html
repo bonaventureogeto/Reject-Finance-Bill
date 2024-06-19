@@ -1,0 +1,9 @@
+{% if tax_list %}
+    <ul>
+    {% for tax in tax_list %}
+        <li><a href="/vat/{{ tax.id }}/">{{ tax.oxygen }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No taxes are available.</p>
+{% endif %}
